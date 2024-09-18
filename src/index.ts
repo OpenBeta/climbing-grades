@@ -8,7 +8,7 @@ import {
   convertGrade
 } from './GradeParser'
 import { GradeBands, GradeBandTypes } from './GradeBands'
-import { AI, Aid, Ewbank, Font, French, Norwegian, Saxon, UIAA, VScale, WI, YosemiteDecimal, BrazilianCrux } from './scales'
+import { AI, Aid, Ewbank, Font, French, Norwegian, Saxon, UIAA, VScale, WI, YosemiteDecimal, BrazilianCrux, Polish } from './scales'
 
 // Free Climbing Grades
 // YDS
@@ -261,6 +261,39 @@ const NORWAY_ARRAY = [
   '12+'
 ]
 
+// TODO: check this is acutally needed and where it is used
+// seems recent changes for the brasilian scale did not introduce this change
+const POLISH_ARRAY = [
+  'I',
+  'II',
+  'III',
+  'IV',
+  'IV+',
+  'V-',
+  'V',
+  'V+',
+  'VI',
+  'VI+',
+  'VI.1',
+  'VI.1+',
+  'VI.2',
+  'VI.2+',
+  'VI.3',
+  'VI.3+',
+  'VI.4',
+  'VI.4+',
+  'VI.5',
+  'VI.5+',
+  'VI.6',
+  'VI.6+',
+  'VI.7',
+  'VI.7+',
+  'VI.8',
+  'VI.8+',
+  'VI.9',
+  'VI.9+'
+]
+
 const CLASS_ARRAY = ['Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5']
 
 export const protection = ['G', 'PG', 'PG13', 'R', 'X']
@@ -280,7 +313,9 @@ export const freeClimbing = {
     Ewbank: EWBANK_ARRAY,
     Saxon: SAXON_ARRAY,
     Norwegian: NORWAY_ARRAY,
-    BrazilianCrux: BrazilianCrux.grades
+    // TODO: check why this differ
+    BrazilianCrux: BrazilianCrux.grades,
+    Polish: POLISH_ARRAY
   },
   community: {}
 }
@@ -312,5 +347,6 @@ export {
   VScale,
   WI,
   YosemiteDecimal,
-  BrazilianCrux
+  BrazilianCrux,
+  Polish
 }
