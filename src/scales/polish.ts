@@ -3,11 +3,7 @@ import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
 
-// TODO: set this regexp
-const polishGradeRegex = /^([1-9][a-c][+]?){1}(?:(\/)([1-9][a-c][+]?))?$/i
-// Supports 1a -> 9c+, slash grades i.e. 5a/5a+ or 6a+/6b
-// NOTE: this currently assumes "incorrect" slash grades follows the normal pattern
-// i.e. 6b+/5a => 6b+/6c
+const polishGradeRegex = /^((I{1,3})|(IV\+?)|(V[+,-]?)|(VI(.[1-9])?\+?))?$/i
 const isPolish = (grade: string): RegExpMatchArray | null => grade.match(polishGradeRegex)
 
 const PolishScale: GradeScale = {

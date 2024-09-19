@@ -3,8 +3,11 @@ import { Polish } from '../../scales'
 
 describe('Polish', () => {
   describe('isPolish', () => {
-    test('VI', () => {
-      expect(Polish.isType('VI'))
+    test('VI is a valid grade', () => {
+      expect(Polish.isType('VI')).toBe(true)
+    })
+    test('asd is not a valid grade', () => {
+      expect(Polish.isType('asd')).toBe(false)
     })
   })
   // describe('Get Score', () => {
