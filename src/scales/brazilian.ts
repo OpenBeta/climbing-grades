@@ -71,7 +71,7 @@ const BrazilianCrux: GradeScale = {
   displayName: 'Brazilian Crux Scale',
   name: GradeScales.BRAZILIAN_CRUX,
   offset: 1000,
-  allowableConversionType: [GradeScales.YDS, GradeScales.SAXON, GradeScales.EWBANK, GradeScales.FRENCH, GradeScales.NORWEGIAN],
+  conversionGroup: 'Free',
   isType: (grade: string): boolean => isBrazilianCrux(grade) !== null,
   getScore,
   getGrade: (score: number | Tuple): string => {

@@ -13,7 +13,7 @@ const AIScale: GradeScale = {
   displayName: 'AI Grade',
   name: GradeScales.AI,
   offset: 1000,
-  allowableConversionType: [GradeScales.WI],
+  conversionGroup: 'Ice',
   isType: (grade: string): boolean => {
     if (isAI(grade) === null) {
       return false

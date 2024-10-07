@@ -14,7 +14,7 @@ const FontScale: GradeScale = {
   displayName: 'Fontainebleau',
   name: GradeScales.FONT,
   offset: 1000,
-  allowableConversionType: [GradeScales.VSCALE],
+  conversionGroup: 'Bouldering',
   isType: (grade: string): boolean => {
     if (isFont(grade) === null) {
       return false

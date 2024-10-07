@@ -14,7 +14,7 @@ const SaxonScale: GradeScale = {
   displayName: 'Saxon Scale',
   name: GradeScales.SAXON,
   offset: 1000,
-  allowableConversionType: [GradeScales.YDS, GradeScales.EWBANK, GradeScales.FRENCH],
+  conversionGroup: 'Free',
   isType: (grade: string): boolean => {
     if (isSaxon(grade) === null) {
       return false

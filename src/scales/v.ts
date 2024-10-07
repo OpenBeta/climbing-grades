@@ -9,7 +9,7 @@ const VScale: GradeScale = {
   displayName: 'V Scale',
   name: GradeScales.VSCALE,
   offset: 1000,
-  allowableConversionType: [GradeScales.FONT],
+  conversionGroup: 'Bouldering',
   isType: (grade: string): boolean => {
     const isVGrade = grade.match(vGradeRegex)
     // If there isn't a match sort it to the bottom

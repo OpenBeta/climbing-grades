@@ -13,7 +13,7 @@ const WIScale: GradeScale = {
   displayName: 'WI Grade',
   name: GradeScales.WI,
   offset: 1000,
-  allowableConversionType: [GradeScales.AI],
+  conversionGroup: 'Ice',
   isType: (grade: string): boolean => {
     if (isWI(grade) === null) {
       return false
