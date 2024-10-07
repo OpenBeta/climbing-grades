@@ -14,7 +14,7 @@ const UIAAScale: GradeScale = {
   displayName: 'UIAA Scale',
   name: GradeScales.UIAA,
   offset: 2000,
-  allowableConversionType: [GradeScales.YDS, GradeScales.SAXON, GradeScales.EWBANK, GradeScales.FRENCH],
+  conversionGroup: 'Free',
   isType: (grade: string): boolean => {
     if (isUIAA(grade) === null) {
       return false

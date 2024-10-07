@@ -15,7 +15,7 @@ const EwbankScale: GradeScale = {
   displayName: 'Ewbank Grade',
   name: GradeScales.EWBANK,
   offset: 1000,
-  allowableConversionType: [GradeScales.YDS, GradeScales.FRENCH, GradeScales.SAXON],
+  conversionGroup: 'Free',
   isType: (grade: string): boolean => {
     if (isEwbank(grade) === null) {
       return false

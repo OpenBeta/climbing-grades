@@ -13,7 +13,7 @@ const Norwegian: GradeScale = {
   displayName: 'Norwegian Scale',
   name: GradeScales.NORWEGIAN,
   offset: 1000,
-  allowableConversionType: [],
+  conversionGroup: 'Free',
   isType: (grade: string): boolean => {
     if (isNorwegian(grade) === null) {
       return false

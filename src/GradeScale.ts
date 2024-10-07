@@ -10,7 +10,7 @@ export default interface GradeScale {
   displayName: string
   name: GradeScalesTypes
   offset: number
-  allowableConversionType: GradeScalesTypes[]
+  conversionGroup: string
   grades?: string[]
 }
 

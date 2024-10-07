@@ -12,7 +12,7 @@ const AidScale: GradeScale = {
   displayName: 'Aid Grade',
   name: GradeScales.AID,
   offset: 1000,
-  allowableConversionType: [],
+  conversionGroup: 'Aid',
   isType: (grade: string): boolean => {
     if (isAid(grade) === null) {
       return false
