@@ -3,7 +3,7 @@ import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
 
-const polishGradeRegex = /^((I{1,3})|(IV\+?)|(V[+,-]?)|(VI(.[1-9])?\+?))?$/i
+const polishGradeRegex = /^((?:I{1,3})|(?:IV[+]?)|(?:V[+,-]?)|(?:VI(?:\.[1-9])?[+]?)){1}(?:(\/)((?:I{1,3})|(?:IV[+]?)|(?:V[+,-]?)|(?:VI(?:\.[1-9])?[+]?)))?$/i
 const isPolish = (grade: string): RegExpMatchArray | null => grade.match(polishGradeRegex)
 
 const PolishScale: GradeScale = {

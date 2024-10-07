@@ -2,12 +2,18 @@
 import { Polish } from '../../scales'
 
 describe('Polish', () => {
-  describe('isPolish', () => {
+  describe('isType', () => {
     test('VI is a valid grade', () => {
       expect(Polish.isType('VI')).toBe(true)
     })
     test('asd is not a valid grade', () => {
       expect(Polish.isType('asd')).toBe(false)
+    })
+    test('VI+/VI.1 is a valid slash grade', () => {
+      expect(Polish.isType('VI+/VI.1')).toBe(true)
+    })
+    test('VI+/VI.1+ is not a valid slash grade', () => {
+      expect(Polish.isType('VI+/VI.1')).toBe(false)
     })
   })
   // describe('Get Score', () => {
