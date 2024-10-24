@@ -10,7 +10,7 @@ export default interface GradeScale {
   displayName: string
   name: GradeScalesTypes
   offset: number
-  conversionGroup: string
+  conversionGroup: ConversionGroupsTypes
   grades?: string[]
 }
 
@@ -30,6 +30,15 @@ export const GradeScales = {
 } as const
 
 export type GradeScalesTypes = typeof GradeScales[keyof typeof GradeScales]
+
+export const ConversionGroups = {
+  AID: 'aid',
+  FREE: 'free',
+  BOULDERING: 'bouldering',
+  ICE: 'ice'
+} as const
+
+export type ConversionGroupsTypes = typeof ConversionGroups[keyof typeof ConversionGroups]
 
 export const findScoreRange = (compareFn, list): number | Tuple => {
   const scores = list.filter(compareFn)

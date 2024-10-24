@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple, getRoundedScoreTuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple, getRoundedScoreTuple } from '../GradeScale'
 import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -14,7 +14,7 @@ const UIAAScale: GradeScale = {
   displayName: 'UIAA Scale',
   name: GradeScales.UIAA,
   offset: 2000,
-  conversionGroup: 'Free',
+  conversionGroup: ConversionGroups.FREE,
   isType: (grade: string): boolean => {
     if (isUIAA(grade) === null) {
       return false
