@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple } from '../GradeScale'
 import aid_table from '../data/aid.json'
 import { AidGrade } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -12,7 +12,7 @@ const AidScale: GradeScale = {
   displayName: 'Aid Grade',
   name: GradeScales.AID,
   offset: 1000,
-  conversionGroup: 'Aid',
+  conversionGroup: ConversionGroups.AID,
   isType: (grade: string): boolean => {
     if (isAid(grade) === null) {
       return false

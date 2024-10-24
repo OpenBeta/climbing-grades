@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple, getRoundedScoreTuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple, getRoundedScoreTuple } from '../GradeScale'
 import boulder from '../data/boulder.json'
 import { Boulder } from '.'
 import { boulderScoreToBand, GradeBandTypes } from '../GradeBands'
@@ -9,7 +9,7 @@ const VScale: GradeScale = {
   displayName: 'V Scale',
   name: GradeScales.VSCALE,
   offset: 1000,
-  conversionGroup: 'Bouldering',
+  conversionGroup: ConversionGroups.BOULDERING,
   isType: (grade: string): boolean => {
     const isVGrade = grade.match(vGradeRegex)
     // If there isn't a match sort it to the bottom

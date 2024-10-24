@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple, getRoundedScoreTuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple, getRoundedScoreTuple } from '../GradeScale'
 import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -19,7 +19,7 @@ const YosemiteDecimal: GradeScale = {
   displayName: 'Yosemite Decimal System',
   name: GradeScales.YDS,
   offset: 1000,
-  conversionGroup: 'Free',
+  conversionGroup: ConversionGroups.FREE,
   isType: (grade: string): boolean => {
     if (isYds(grade) === null) {
       return false

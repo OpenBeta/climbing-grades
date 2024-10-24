@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, getRoundedScoreTuple, Tuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, getRoundedScoreTuple, Tuple } from '../GradeScale'
 import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -15,7 +15,7 @@ const EwbankScale: GradeScale = {
   displayName: 'Ewbank Grade',
   name: GradeScales.EWBANK,
   offset: 1000,
-  conversionGroup: 'Free',
+  conversionGroup: ConversionGroups.FREE,
   isType: (grade: string): boolean => {
     if (isEwbank(grade) === null) {
       return false

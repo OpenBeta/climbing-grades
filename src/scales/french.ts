@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple, getRoundedScoreTuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple, getRoundedScoreTuple } from '../GradeScale'
 import routes from '../data/routes.json'
 import { Route } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -13,7 +13,7 @@ const FrenchScale: GradeScale = {
   displayName: 'French Scale',
   name: GradeScales.FRENCH,
   offset: 1000,
-  conversionGroup: 'Free',
+  conversionGroup: ConversionGroups.FREE,
   isType: (grade: string): boolean => {
     if (isFrench(grade) === null) {
       return false

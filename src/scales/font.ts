@@ -1,5 +1,5 @@
 import boulder from '../data/boulder.json'
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple, getRoundedScoreTuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple, getRoundedScoreTuple } from '../GradeScale'
 
 import { Boulder } from '.'
 import { boulderScoreToBand, GradeBandTypes } from '../GradeBands'
@@ -14,7 +14,7 @@ const FontScale: GradeScale = {
   displayName: 'Fontainebleau',
   name: GradeScales.FONT,
   offset: 1000,
-  conversionGroup: 'Bouldering',
+  conversionGroup: ConversionGroups.BOULDERING,
   isType: (grade: string): boolean => {
     if (isFont(grade) === null) {
       return false

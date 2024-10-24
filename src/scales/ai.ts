@@ -1,4 +1,4 @@
-import GradeScale, { findScoreRange, getAvgScore, GradeScales, Tuple } from '../GradeScale'
+import GradeScale, { findScoreRange, getAvgScore, GradeScales, ConversionGroups, Tuple } from '../GradeScale'
 import ice_table from '../data/ice.json'
 import { IceGrade } from '.'
 import { GradeBandTypes, routeScoreToBand } from '../GradeBands'
@@ -13,7 +13,7 @@ const AIScale: GradeScale = {
   displayName: 'AI Grade',
   name: GradeScales.AI,
   offset: 1000,
-  conversionGroup: 'Ice',
+  conversionGroup: ConversionGroups.ICE,
   isType: (grade: string): boolean => {
     if (isAI(grade) === null) {
       return false
