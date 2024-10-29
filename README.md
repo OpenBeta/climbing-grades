@@ -15,6 +15,7 @@ Javascript utilities for working with rock climbing grades.
 - [x] Ewbanks
 - [x] Saxon
 - [x] Brazilian
+- [x] Polish (Kurtyka)
 
 **Bouldering**
 - [x] Vermin (V-scale)
